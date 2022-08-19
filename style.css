@@ -1,0 +1,147 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #252525;
+    }
+  
+  .title-container {
+    text-align: center;
+    /* width: 510px; */
+    margin-top: 1rem;
+    font-size:50px;
+    display:flex;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.letter-yellow {
+    color: #c79c2e;
+}
+
+.letter-green {
+    color: #51b36e;
+}
+.letter-red {
+    color: #943e3c;
+}
+
+.tile-row {
+    margin-bottom: 1rem;
+    justify-content: center;
+    display:flex;
+    box-sizing: border-box;
+}
+
+
+.tile-column{
+        height: 3.625rem;
+        width: 3.625rem;
+    margin-left: 0.325rem;
+    font-weight: 600;
+    font-family: 'Mitr', sans-serif;
+    color: #FAFAFF;
+    background-color: #00000070;
+    /* opacity: 0.3; */
+    border-radius: 10%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.65em;
+    line-height: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tile-container{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.title-container span{
+    margin-left:5px;
+}
+
+.tile-container>div>div{
+    display:flex;
+}
+
+.tile-container>div{
+    font-size: 1em;
+    display: grid;
+    grid-gap: 0.325rem;
+    margin: 0;
+    padding: 0;
+}
+
+.tile-container{
+    margin-top: 1rem;
+}
+
+.typing {
+    background-color: transparent;
+    border: 0.35em solid #00000070;;
+}
+
+.letter-focus{
+    border-bottom: 0.75rem solid #00000070 !important;
+}
+
+/*  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/*
+
+
+
+.disabled {
+    border: 1px solid #252525;
+}
+
+.right {
+    background-color: #51b36e;
+    color: #f4f3f1;
+}
+
+.wrong {
+    background-color: #943e3c;
+    color: #f4f3f1;
+}
+
+.displaced {
+    background-color: #c79c2e;
+    color: #f4f3f1;
+}
+
+.keyboard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.keyboard-row-container {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    display: flex;
+}
+
+.keyboard-row-container.notAlphabetic {
+    width:100%
+}
+
+.keyboard-row-container:not(.notAlphabetic) button {
+    width: 8%;
+    height: 40px;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    border: 1px solid #252525;
+    font-size: 16px;
+    cursor: pointer;
+} */
