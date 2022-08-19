@@ -57,3 +57,15 @@ document.addEventListener("keydown", function (event) {
     }
   
 });
+
+for(var index in activeRow){
+    var collumnIndex = activeRow[index];
+    console.log(activeRow[index])
+    /* collumnIndex.addEventListener("click",function(event){
+    console.log(event)
+    }) */
+    document.getElementById("game0row0column4").addEventListener("click",function(event){
+        console.log(event)
+    })
+}
+
