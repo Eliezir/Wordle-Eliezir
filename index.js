@@ -73,11 +73,20 @@ switch(event.key){
         changeKey("backward")
     break;
     case "Backspace":
-    if(activeCol ==-1){
+    if(activeCol ==-1)
+    {
         activeRow[4].classList.toggle("letter-focus")
         activeCol = 4;
     }
+
     var activeCell = document.getElementsByClassName("letter-focus");
+    if(activeCell[0].childNodes.length == 0 && activeCol > 0)
+    {
+        activeRow[activeCol].classList.toggle("letter-focus");
+        activeCol--;
+        activeRow[activeCol].classList.toggle("letter-focus");
+        var activeCell = document.getElementsByClassName("letter-focus");
+    }
     activeCell[0].innerHTML ="";
     break;
     case "Enter":
@@ -104,7 +113,7 @@ switch(event.key){
 }
 
 var key = event.key.toUpperCase();
-if( key.length == 1 && key.charCodeAt() >=65 &&  key.charCodeAt()  <= 90 ){
+if( key.length == 1 && key.charCodeAt() >=65 &&  key.charCodeAt()  <= 90  && activeCol > -1){
     var filled = 0;
     var activeCell = document.getElementsByClassName("letter-focus");
     activeCell[0].innerHTML =key;
