@@ -84,18 +84,6 @@
 .letter-focus{
     border-bottom: 0.5rem solid #00000070 !important;
 }
-
-/*  .app-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-} */
-
-/*
-
-
-
 .disabled {
     border: 1px solid #252525;
 }
@@ -114,6 +102,21 @@
     background-color: #c79c2e;
     color: #f4f3f1;
 }
+
+
+
+/*  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/*
+
+
+
+
 
 .keyboard-container {
     width: 100%;
