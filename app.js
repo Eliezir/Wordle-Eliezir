@@ -5,6 +5,7 @@ const rows = 6;
 const columns = 5;
 var activeRowIndex = 0;
 var activeCol = 0;
+var termo = "TERMO"
 
 
 
@@ -97,6 +98,14 @@ switch(event.key){
     /* aqui tem q checar se a palavra está certa, se ela existe pra caso seja errada rodar o if  */
     if(palavra.length == 5)
     {
+        for(var x = 0; x < 5; x++){
+            if(palavra[x] == termo[x]){
+                activeRow[x].classList.add("right")
+            }
+            else if(termo.includes(palavra[x])){
+                activeRow[x].classList.add("displaced")
+            }
+        }
         console.log(palavra)
         letterFocus(activeCol);
         setRow(activeRowIndex);
