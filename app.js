@@ -93,6 +93,7 @@ switch(event.key){
     case "Enter":
     var palavra = "";
      var termoEdit = termo;
+     console.log("teste")
     for(var x = 0 ; x < columns ; x++){
         palavra+= activeRow[x].innerHTML;
     }
@@ -102,7 +103,8 @@ switch(event.key){
         for(var x = 0; x < 5; x++){
             if(palavra[x] == termoEdit[x]){
                 activeRow[x].classList.add("right");
-                termoEdit[x] = '0';
+                termoEdit.replace(termoEdit[x], "0")
+                console.log(termoEdit[x])
             }
             else if(termoEdit.includes(palavra[x])){
                 activeRow[x].classList.add("displaced")
