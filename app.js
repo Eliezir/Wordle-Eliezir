@@ -103,10 +103,14 @@ switch(event.key){
             if(palavra[x] == termoEdit[x]){
                 activeRow[x].classList.add("right");
                 termoEdit = termoEdit.replace(termoEdit[x], "0")
+               
             } }
     for(var x = 0; x < 5; x++){
         if(termoEdit.includes(palavra[x])){
             activeRow[x].classList.add("displaced")
+            var letterIndex = termoEdit.indexOf(palavra[x])
+            termoEdit = termoEdit.replace(termoEdit[letterIndex], "0")
+            console.log(termoEdit)
         }}
         if(palavra == termo){
             alert("Parabéns, você ganhou! ;D")
@@ -174,6 +178,16 @@ else if(type =="remove")
 
 })
 }
+
+/* revisar essa função */
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
 
 
 

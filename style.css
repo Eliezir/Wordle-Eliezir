@@ -51,12 +51,15 @@
     align-items: center;
     font-size: 2.75rem;
     cursor: pointer;
+    animation-name: colorWrong;
+    animation-duration: 1s;
 }
 
 .tile-container{
     display:flex;
     justify-content: space-evenly;
     margin-top: 1em;
+    
 }
 
 .title-container span{
@@ -87,21 +90,42 @@
 .disabled {
     border: 1px solid #252525;
 }
+@keyframes colorRight {
+    from {background-color: transparent;}
+    to {background-color: #51b36e;}
+}
+
+@keyframes colorDisplaced {
+    from {background-color: transparent;}
+    to {background-color: #c79c2e;}
+}
+@keyframes colorWrong {
+    from {background-color: transparent;}
+    to {background-color: #00000070;}
+}
+
 
 .right {
+    animation-name: colorRight;
+    animation-duration: 1s;
     background-color: #51b36e;
     color: #f4f3f1;
 }
 
 .wrong {
+    
     background-color: #943e3c;
     color: #f4f3f1;
 }
 
 .displaced {
+    animation-name:colorDisplaced;
+    animation-duration: 1s;
     background-color: #c79c2e;
     color: #f4f3f1;
 }
+
+
 
 
 
