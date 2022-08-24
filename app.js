@@ -8,10 +8,9 @@ var activeCol = 0;
 
 
 /* sortear a palavra - provisório */
-var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo"]
+var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo","vasco","teste","heroi","limbo","acaso","temer","risao","pleno","valor","cisma","bruma","lugar","crise","obter","falso","praia","parvo","reter","tomar","burro","laico","levar","morte","noite","ouvir","leigo","deter","ideal","fonte","jovem"]
 var palavraIndex = Math.floor(Math.random() *listaPalavras.length)
-/* var termo = listaPalavras[palavraIndex].toUpperCase(); */
-var termo = "ASSIM";
+var termo = listaPalavras[palavraIndex].toUpperCase();
 
 /* teclado virtual */
 const backspaceAndEnterRow = document.querySelector("#backspaceAndEnterRow");
@@ -46,7 +45,7 @@ tiles.append(games[i]);
 
 CreateGame(1);
 
-
+/* função para mudar a cor das teclas do teclado virtual */
 function changeKeyBoardColor(key,color){
     var k = document.getElementById(key);
     k.classList.add(color)
@@ -96,8 +95,9 @@ function handleEnter(){
             var letterIndex = termoEdit.indexOf(palavra[x])
             termoEdit = termoEdit.replace(termoEdit[letterIndex], "0")
         }
-         else if(!(termo.includes(palavra[x]))){
+         else if(!(termoEdit.includes(palavra[x]))){
          activeRow[x].classList.add("wrong")
+         if(!(termo.includes(palavra[x])))
          changeKeyBoardColor(palavra[x],"letter-used")}}
         if(palavra == termo){
             alert("Parabéns, você ganhou! ;D")

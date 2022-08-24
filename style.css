@@ -140,7 +140,7 @@
 .keyboard-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 .keyboard-row-container {
@@ -152,9 +152,13 @@
   
 }
 
+
+
+
 .keyboard-row-container button{
-    width: 4%;
-    height: 40px;
+    padding: 1px 6px;
+    width: 4rem;
+    height: 5rem;
     border-radius: 0.25rem;
     margin-right: 0.25rem;
     border: 1px solid #252525;
@@ -165,41 +169,51 @@
     font-weight: 900;
 }
 
-#backspace-btn{
+#enter-btn,#backspace-btn{
     width: 5%;
-    margin-right: 15px;
+    margin:0;
+    background-color: transparent;
+    border: 1px solid #000000;
 }
 
-#enter-btn{
-    margin-left:15px;
-    width: 10%;
+#backspace-btn{
+    margin-right: 1rem!important;
+}
+
+#backspace-btn:hover{
+color:#943e3c;
+border-color:#943e3c;}
+
+#enter-btn:hover{
+    color:#51b36e;
+    border-color:#51b36e;
 }
 
 
-
-/*  .app-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+/* #enter-btn{
+    margin-left: 4rem;
+    width: 8rem;
 } */
 
-@media(max-width:900px){
-    .keyboard-row-container button{
-        width: 8%;
-}
-    #enter-btn{
-        width:20%;
-    }
-    #backspace-btn {
-        width: 10%;}
 
+
+@media(max-width:900px){
+    .keyboard-row-container button,#backspace-btn{
+        width: 2rem;
+        height: 3.5rem;
+}
+    #enter-btn,#backspace-btn{
+        width:5rem;
+      
+    }
+  
 .tile-column {
     height: 4rem;
     width: 4rem;
+}
+   
 
-
-}}
+}
 
 
 
