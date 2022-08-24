@@ -211,6 +211,10 @@ border-color:#943e3c;}
     height: 4rem;
     width: 4rem;
 }
+    
+    .tile-container{
+        margin-top: 0.25em;
+    }
    
 
 }
