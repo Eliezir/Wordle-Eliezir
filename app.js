@@ -6,6 +6,7 @@ const columns = 5;
 var activeRowIndex = 0;
 var activeCol = 0;
 
+console.log("Ta olhando o console por que?, tu n vai pescar no joguinho de palavras n né?")
 
 /* sortear a palavra - provisório */
 var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo","vasco","teste","heroi","limbo","acaso","temer","risao","pleno","valor","cisma","bruma","lugar","crise","obter","falso","praia","parvo","reter","tomar","burro","laico","levar","morte","noite","ouvir","leigo","deter","ideal","fonte","jovem"]
