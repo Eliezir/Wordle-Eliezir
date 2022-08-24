@@ -6,12 +6,13 @@ const columns = 5;
 var activeRowIndex = 0;
 var activeCol = 0;
 
+console.log("Ta olhando o console por que?, tu n vai pescar no joguinho de palavras n né?")
 
 /* sortear a palavra - provisório */
 var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo"]
 var palavraIndex = Math.floor(Math.random() *listaPalavras.length)
-/* var termo = listaPalavras[palavraIndex].toUpperCase(); */
-var termo = "ASSIM";
+var termo = listaPalavras[palavraIndex].toUpperCase();
+/* var termo = "ASSIM";*/
 
 /* teclado virtual */
 const backspaceAndEnterRow = document.querySelector("#backspaceAndEnterRow");
