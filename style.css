@@ -1,6 +1,6 @@
     body {
         font-family: 'Montserrat', sans-serif;
-        background-color: #252525;
+        background-color: #141414;
         Color:white;
         font-size: 82px;
     }
@@ -51,15 +51,15 @@
     align-items: center;
     font-size: 2.75rem;
     cursor: pointer;
-    animation-name: colorWrong;
-    animation-duration: 1s;
 }
 
 .tile-container{
-    display:flex;
-    justify-content: space-evenly;
-    margin-top: 1em;
-    
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    display: flex;
+    margin-top: 1em;    
 }
 
 .title-container span{
@@ -101,44 +101,39 @@
 }
 @keyframes colorWrong {
     from {background-color: transparent;}
-    to {background-color: #00000070;}
+    to {background-color: #000000b0;}
 }
 
 
 .right {
     animation-name: colorRight;
     animation-duration: 1s;
-    background-color: #51b36e;
+    background-color: #51b36e !important;
     color: #f4f3f1;
 }
 
 .wrong {
-    
-    background-color: #943e3c;
+    background-color: #000000b0;
     color: #f4f3f1;
+    animation-name: colorWrong;
+    animation-duration: 1s;
 }
 
 .displaced {
     animation-name:colorDisplaced;
     animation-duration: 1s;
-    background-color: #c79c2e;
+    background-color: #c79c2e !important;
     color: #f4f3f1;
+}
+
+.letter-used{
+    color: #f4f3f13f !important;
+    background-color: #00000038 !important;
 }
 
 
 
-
-
-/*  .app-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-} */
-
-/*
-
-
+/* .half-painted{ background: conic-gradient(#51b36e 180deg,#c79c2e 180deg);} */
 
 
 
@@ -154,18 +149,57 @@
     margin-bottom: 0.5rem;
     justify-content: center;
     display: flex;
+  
 }
 
-.keyboard-row-container.notAlphabetic {
-    width:100%
-}
-
-.keyboard-row-container:not(.notAlphabetic) button {
-    width: 8%;
+.keyboard-row-container button{
+    width: 4%;
     height: 40px;
     border-radius: 0.25rem;
     margin-right: 0.25rem;
     border: 1px solid #252525;
     font-size: 16px;
     cursor: pointer;
+    background-color: #00000070;
+    color:white;
+    font-weight: 900;
+}
+
+#backspace-btn{
+    width: 5%;
+    margin-right: 15px;
+}
+
+#enter-btn{
+    margin-left:15px;
+    width: 10%;
+}
+
+
+
+/*  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 } */
+
+@media(max-width:900px){
+    .keyboard-row-container button{
+        width: 8%;
+}
+    #enter-btn{
+        width:20%;
+    }
+    #backspace-btn {
+        width: 10%;}
+
+.tile-column {
+    height: 4rem;
+    width: 4rem;
+
+
+}}
+
+
+
