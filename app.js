@@ -1,3 +1,5 @@
+import {WordleDictionary} from dictionary.js;
+
 const tiles = document.querySelector(".tile-container");
 const games = []
 /* variaveis para navegação entre linhas e colunas */
@@ -9,9 +11,9 @@ var activeCol = 0;
 console.log("Ta olhando o console por que?, tu n vai pescar no joguinho de palavras n né?")
 
 /* sortear a palavra - provisório */
-var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo","vasco","teste","heroi","limbo","acaso","temer","risao","pleno","valor","cisma","bruma","lugar","crise","obter","falso","praia","parvo","reter","tomar","burro","laico","levar","morte","noite","ouvir","leigo","deter","ideal","fonte","jovem"]
-var palavraIndex = Math.floor(Math.random() *listaPalavras.length)
-var termo = listaPalavras[palavraIndex].toUpperCase();
+
+var palavraIndex = Math.floor(Math.random() *WordleDictionary.length)
+var termo = WordleDictionary[palavraIndex].toUpperCase();
 /* var termo = "MEXER"; */
 
 /* teclado virtual */
