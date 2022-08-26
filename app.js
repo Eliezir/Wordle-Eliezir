@@ -12,6 +12,7 @@ console.log("Ta olhando o console por que?, tu n vai pescar no joguinho de palav
 var listaPalavras = ["sagaz","termo","mexer","fazer","sanar","assim","fosse","ideia","inato","ideia","poder","audaz","dengo","vasco","teste","heroi","limbo","acaso","temer","risao","pleno","valor","cisma","bruma","lugar","crise","obter","falso","praia","parvo","reter","tomar","burro","laico","levar","morte","noite","ouvir","leigo","deter","ideal","fonte","jovem"]
 var palavraIndex = Math.floor(Math.random() *listaPalavras.length)
 var termo = listaPalavras[palavraIndex].toUpperCase();
+/* var termo = "MEXER"; */
 
 /* teclado virtual */
 const backspaceAndEnterRow = document.querySelector("#backspaceAndEnterRow");
@@ -80,7 +81,7 @@ function handleBackspace(){
 function handleEnter(){
     var palavra = "";
     var termoEdit = termo;
-    var answers = []
+    var answers = ["","","","",""]
     for(var x = 0 ; x < columns ; x++){
         palavra+= activeRow[x].innerHTML;
     }
@@ -123,21 +124,21 @@ function handleEnter(){
     activeRow[x].style.animationDelay = (x*animation_duration)/2; */
             if(palavra[x] == termoEdit[x]){
                /*  activeRow[x].classList.add("right"); */
-               answers.push("right")
+               answers[x] = ("right")
                 changeKeyBoardColor(palavra[x],"right")
                 termoEdit = termoEdit.replace(termoEdit[x], "0")
                
             } }
     for(var x = 0; x < 5; x++){
-        if(termoEdit.includes(palavra[x]) && activeRow[x].classList.contains("right") == false){
+        if(termoEdit.includes(palavra[x]) && termoEdit[x]!="0"){
             /* activeRow[x].classList.add("displaced") */
-            answers.push("displaced")
+            answers[x] = ("displaced")
             changeKeyBoardColor(palavra[x],"displaced")
             var letterIndex = termoEdit.indexOf(palavra[x])
             termoEdit = termoEdit.replace(termoEdit[letterIndex], "1")
         }
          else if(!(termoEdit.includes(palavra[x]))&& termoEdit[x]!= "0"){
-            answers.push("wrong")
+            answers[x] = ("wrong")
          /* activeRow[x].classList.add("wrong") */
          if(!(termo.includes(palavra[x])))
          changeKeyBoardColor(palavra[x],"letter-used")}} 
@@ -149,12 +150,11 @@ function handleEnter(){
         const keyTile = activeRow[i];
         const color = answers[i];
         setTimeout(() => {
-        keyTile.classList.add(color); 
-        console.log(keyTile)
+        keyTile.classList.add("animated")
+        keyTile.classList.add(color);
         },i*500)
-/*         keyTile.classList.add("animated")
-        keyTile.style.animationDelay = ("500ms"); */
-    }
+      
+    }  console.log(answers )
 
 
             setTimeout(() => {
@@ -171,15 +171,15 @@ function handleEnter(){
                     changeEventListener("remove");
                     alert("Você perdeu ;p, a palavra era: "+termo+" recarregue a página e tente novamente!")}
                 else{
-               /*  letterFocus(activeCol);
-                setRow(activeRowIndex);
-                activeCol = 0;
-                changeEventListener("remove");
-                activeRowIndex ++;
-                setRow(activeRowIndex);
-                letterFocus(activeCol);
-                changeEventListener("add"); */
-    } });
+            letterFocus(activeCol);
+            setRow(activeRowIndex);
+            activeCol = 0;
+            changeEventListener("remove");
+            activeRowIndex ++;
+            setRow(activeRowIndex);
+            letterFocus(activeCol);
+            changeEventListener("add");
+    } },5*510);
 
 }}
 
