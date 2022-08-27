@@ -232,6 +232,10 @@ body {
 .btn-close {
   width: 1rem;
   height: 1rem;
+  position: absolute; 
+  right: 20px;
+  color:white;
+  filter: invert(100%)
 }
 
 /* .modal{
