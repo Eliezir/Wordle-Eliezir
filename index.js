@@ -1,4 +1,4 @@
-import { wordleDictionary, wordleDictionaryNoAccents } from "https://eliezir.github.io/Wordle-Eliezir/dictionary.js;
+import { wordleDictionary, wordleDictionaryNoAccents } from "https://eliezir.github.io/Wordle-Eliezir/dictionary.js";
 
 const dictionaryNoAccents = wordleDictionaryNoAccents;
 const dictionary = wordleDictionary;
