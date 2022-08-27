@@ -1583,6 +1583,11 @@ export const wordleDictionary = [
   "testa",
   "vasco",
   "risão",
+  "garfo", 
+  "éster",
+  "fanta", 
+  "morte",
+  "fosse",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3170,5 +3175,9 @@ export const wordleDictionaryNoAccents = [
   "testa",
   "vasco",
   "risao",
+  "garfo", 
+  "ester",
+  "fanta", 
+  "morte",
+  "fosse",
 ];
-
