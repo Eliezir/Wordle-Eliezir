@@ -5,22 +5,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Letreco?</title>
+<!-- font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <!--  google fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+<!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <!--     Css -->
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-
+  
 <div class="app-container">
-
-    <div class ="title-container">
-      <span style="color:red">B</span><span style="color:#f9db1a">L</span><span style="color:blue">E</span><span style="color:purple">S</span><span style="color:orange">S</span><span style="color:cyan">E</span><span style="color:green">D</span>
+  <div class="header">   
+    <a href="https://twitter.com/oEmpn_" target="_blank" rel="next"><i class="fa-brands fa-twitter"></i></a>
+    
+      <i id="iconTutorial" class="fa-solid fa-circle-question"></i>
+      <h1>BLESSED</h1>
+      <a href="https://github.com/Eliezir/Letreco" target="_blank" rel="next"><i class=" fa-brands fa-github"></i></a>
+      <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank" rel="next"><i>W</i></a>
         </div>
+
+<div class="msg">
+  <div Id ="palavraInvalida"><p>Palavra invalida</p></div>
+</div>
 <div class="tile-container"></div>
 <div class="keyboard-container">
   <div class="keyboard-row-container notAlphabetic" id="backspaceAndEnterRow"></div>
@@ -29,7 +40,82 @@
   <div class="keyboard-row-container" id="keyboardThirdRow"></div>
 </div>
 </div>
-  <script src="app.js"></script>
+
+<!-- Modais -->
+<button type="button" id="btn-modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalWinLose">
+</button>
+
+<!-- Modal vitoria / derrota -->
+<div class="modal fade" id="modalWinLose"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-txt"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-reload" class="btn btn-primary">Jogar Novamente</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal tutorial-->
+<button type="button" id="btn-modal-tutorial" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTutorial">
+</button>
+<div class="modal fade" id="modalTutorial"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Como jogar</h5>
+      </div>
+      <div class="modal-body">
+        <div class="tutorialTexto"><p>O jogo é uma versão em pt-br do jogo Wordle, você terá 6 tentativas de acertar a palavra secreta, as palavras são sorteadas ao carregar a pagina, ou seja, você pode jogar quantas vezes quiser</p>
+        </div>
+        <div>
+          <p>Caso a letra fique verde, ela está presente na palavra secreta e na posição correta</p>
+          <div class="wordExample">
+            <div>T</div><div>E</div><div class="letter-right">S</div><div>T</div><div>E</div>
+            </div>
+        </div>
+        <div>
+          <p>Caso a letra fique amarela, ela está presente na palavra secreta, porém está na posição errada</p>
+          <div class="wordExample">
+            <div class="letter-displaced">R</div><div>I</div><div>S</div><div>Ã</div><div>O</div>
+            </div>
+        </div>
+        <div>
+          <p>Caso a letra fique preta, ela não está presente na palavra secreta.</p>
+          <div class="wordExample wrongExample">
+          <div>B</div><div>U</div><div>R</div><div>R</div><div>O</div>
+        </div></div>
+      </div>
+      <div class="modal-footer">
+       <p>Criado por 
+        <a href="https://github.com/Eliezir" target='_blank'>Eliezir Moreira</a></p><br>
+        <p>Banco de palavras extraído de:
+          <a href="https://github.com/andsfonseca/palavras-pt-br" target='_blank'>andsfonseca/palavras-pt-br/<a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script defer src="app.js" type="module"></script>
+  <script src="dictionary.js" type="module"></script>
 <!--   <script src="index.js"></script>
 <script type="text/javascript" src="index.js"></script> -->
 </body>
