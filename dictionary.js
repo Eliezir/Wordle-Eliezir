@@ -1590,6 +1590,7 @@ export const wordleDictionary = [
   "fosse",
   "trave",
   "beijo",
+  "jambo",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3184,4 +3185,5 @@ export const wordleDictionaryNoAccents = [
   "fosse",
   "trave",
   "beijo",
+  "jambo",
 ];
