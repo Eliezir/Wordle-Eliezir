@@ -1,4 +1,4 @@
-import { wordleDictionary, wordleDictionaryNoAccents } from "https://eliezir.github.io/Wordle-Eliezir/dictionary.js";
+import { wordleDictionary, wordleDictionaryNoAccents } from "/dictionary.js";
 
 const dictionaryNoAccents = wordleDictionaryNoAccents;
 const dictionary = wordleDictionary;
@@ -21,7 +21,7 @@ console.log(
 
 /* sortear a palavra*/
 
-var palavraIndex = Math.floor(Math.random() * dictionaryNoAccents.length);
+var palavraIndex = /* Math.floor(Math.random() * dictionaryNoAccents.length); */ 336;
 var termo = dictionaryNoAccents[palavraIndex].toUpperCase();
 
 const msgWin = "Parabéns, você ganhou!";
@@ -91,8 +91,18 @@ function checkWord(word) {
   } else {
     return false;
   }
-  /* else if() */
 }
+
+/* substitui o caractere de um index especifico */
+String.prototype.replaceAt = function (index, replacement) {
+  if (index >= this.length) {
+    return this.valueOf();
+  }
+
+  var chars = this.split("");
+  chars[index] = replacement;
+  return chars.join("");
+};
 
 /* Funções de teclado */
 function handleBackspace() {
@@ -125,7 +135,7 @@ function handleEnter() {
           if (palavra[x] == termoEdit[x]) {
             answers[x] = "right";
             changeKeyBoardColor(palavra[x], "right");
-            termoEdit = termoEdit.replace(termoEdit[x], "0");
+            termoEdit = termoEdit.replaceAt(x, "0");
           }
         }
         for (var x = 0; x < 5; x++) {
