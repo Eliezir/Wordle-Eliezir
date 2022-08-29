@@ -1591,6 +1591,9 @@ export const wordleDictionary = [
   "trave",
   "beijo",
   "jambo",
+  "porta",
+  "verão",
+  "quero",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3186,4 +3189,7 @@ export const wordleDictionaryNoAccents = [
   "trave",
   "beijo",
   "jambo",
+  "porta",
+  "verao",
+  "quero",
 ];
