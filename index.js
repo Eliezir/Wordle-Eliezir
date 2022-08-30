@@ -178,6 +178,10 @@ function handleEnter() {
             document.getElementById("modal-txt").innerHTML = txtLose;
             document.getElementById("btn-modal").click();
           } else {
+           var confirmRow1 = document.getElementById("game0row"+activeRowIndex+"column1")
+           var confirmRow2 = document.getElementById("game0row"+activeRowIndex+"column2")
+           var confirmRow3 = document.getElementById("game0row"+activeRowIndex+"column3")
+            if(confirmRow1.innerHTML != "" && confirmRow2.innerHTML != "" && confirmRow3.innerHTML !=""){
             letterFocus(activeCol);
             setRow(activeRowIndex);
             activeCol = 0;
@@ -186,7 +190,7 @@ function handleEnter() {
             setRow(activeRowIndex);
             letterFocus(activeCol);
             changeEventListener("add");
-          }
+            }}
         }, 5 * 510);
       }
     } else {
