@@ -182,7 +182,6 @@ function handleEnter() {
            var confirmRow2 = document.getElementById("game0row"+activeRowIndex+"column2")
            var confirmRow3 = document.getElementById("game0row"+activeRowIndex+"column4")
 
-")
             if(confirmRow1.innerHTML != "" && confirmRow2.innerHTML != "" && confirmRow3.innerHTML !=""){
             letterFocus(activeCol);
             setRow(activeRowIndex);
