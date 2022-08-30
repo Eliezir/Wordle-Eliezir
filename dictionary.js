@@ -1595,6 +1595,16 @@ export const wordleDictionary = [
   "verão",
   "quero",
   "garoa",
+  "conto",
+  "solta",
+  "mente",
+  "sente",
+  "tente",
+  "freio",
+  "volta",
+  "força",
+  "veste",
+  "leste",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3194,4 +3204,14 @@ export const wordleDictionaryNoAccents = [
   "verao",
   "quero",
   "garoa",
+  "conto",
+  "solta",
+  "mente",
+  "sente",
+  "tente",
+  "freio",
+  "volta",
+  "forca",
+  "veste",
+  "leste",
 ];
