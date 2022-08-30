@@ -21,7 +21,7 @@ console.log(
 
 /* sortear a palavra*/
 
-var palavraIndex = /* Math.floor(Math.random() * dictionaryNoAccents.length); */ 336;
+var palavraIndex = Math.floor(Math.random() * dictionaryNoAccents.length);
 var termo = dictionaryNoAccents[palavraIndex].toUpperCase();
 
 const msgWin = "Parabéns, você ganhou!";
