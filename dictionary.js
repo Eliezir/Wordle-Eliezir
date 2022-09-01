@@ -1606,6 +1606,8 @@ export const wordleDictionary = [
   "veste",
   "leste",
   "abusa",
+  "livro",
+  "tenda",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3216,4 +3218,6 @@ export const wordleDictionaryNoAccents = [
   "veste",
   "leste",
   "abusa",
+  "livro",
+  "tenda",
 ];
