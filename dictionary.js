@@ -1608,6 +1608,8 @@ export const wordleDictionary = [
   "abusa",
   "livro",
   "tenda",
+  "trato",
+  "prego",
 ];
 
 export const wordleDictionaryNoAccents = [
@@ -3220,4 +3222,6 @@ export const wordleDictionaryNoAccents = [
   "abusa",
   "livro",
   "tenda",
+  "trato",
+  "prego",
 ];
