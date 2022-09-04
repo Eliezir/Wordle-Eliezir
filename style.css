@@ -113,7 +113,7 @@ body {
 }
 
 .letter-focus {
-  border-bottom: 0.5rem solid #00000070 !important;
+  border-bottom: 0.7rem solid #00000070 !important;
 }
 .disabled {
   border: 1px solid #252525;
